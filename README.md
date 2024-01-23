@@ -2,7 +2,7 @@
 
 Calling Win32 APIs from VBA:
 
-Windows operating system APIs (or Win32 APIs) are located in dynamic link libraries and run as unmanaged code. We'll use the Declare1 keyword to link to these APIs in VBA, providing the name of the function, the DLL it resides in, the argument types, and return value types. We will use a Private Declare, meaning that this function will only be used in our local code.
+Windows operating system APIs (or Win32 APIs) are located in dynamic link libraries and run as unmanaged code. We'll use the Declare keyword to link to these APIs in VBA, providing the name of the function, the DLL it resides in, the argument types, and return value types. We will use a Private Declare, meaning that this function will only be used in our local code.
 The typical approach is to use three Win32 APIs from Kernel32.dll: VirtualAlloc, RtlMoveMemory, and CreateThread. For function prototype we can refer https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex
 
 
